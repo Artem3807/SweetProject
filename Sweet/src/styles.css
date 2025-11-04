@@ -1,0 +1,262 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0; /* Общий фон, если секции не покрывают весь экран */
+}
+
+/* Базовые стили для всех секций */
+.section {
+  height: 100vh; /* Каждая секция занимает всю высоту экрана */
+  display: flex;
+  flex-direction: column; /* Располагаем элементы вертикально */
+  justify-content: center; /* Выравнивание по вертикали в центре */
+  align-items: center; /* Выравнивание по горизонтали в центре */
+  color: rgb(60, 61, 5); /* Цвет текста внутри секций */
+  padding: 20px; /* Отступы внутри секции */
+  box-sizing: border-box; /* Учитываем padding в общей высоте */
+}
+
+/* Стили для каждой конкретной секции */
+
+
+.section-2 {
+  background-color: #28a745; /* Зеленый */
+}
+
+.section-3 {
+  background-color: #dc3545; /* Красный */
+}
+
+.section-4 {
+  background-color: #6f42c1; /* Фиолетовый */
+}
+
+.section-5 {
+  background-color: #fd7e14; /* Оранжевый */
+}
+
+/* Стили для заголовков внутри секций */
+.section h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для параграфов внутри секций */
+.section p {
+  font-size: 1.5em;
+}
+
+
+
+
+.section-1 {
+  background-color: #FCF2FF; /* Синий */
+  /* Убираем фиксированную высоту, чтобы контент мог влиять на высоту */
+  min-height: 100vh;
+  height: auto; /* Позволяем контенту определять высоту */
+  padding-top: 80px; /* Добавим небольшой отступ сверху, чтобы контент не упирался в хедер */
+  padding-bottom: 80px; /* Добавим немного низа */
+}
+
+/* Стили для первой секции */
+.section-1 h1 {
+  font-size: 4em; /* Крупный заголовок */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(141, 139, 32, 0.3);
+ /* Выравниваем по центру */
+}
+
+.section-1 .lead { /* Стиль для подзаголовка */
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  text-align: left; /* Выравниваем по центру */
+}
+
+/* Контейнер для изображения, чтобы позиционировать баннер */
+.section-1 .image-container {
+  position: relative; /* Нужен для абсолютного позиционирования баннера */
+  padding-top: 20px; /* Небольшой отступ сверху для картинки */
+}
+
+.section-1 .image-wrapper {
+  position: relative;
+  display: inline-block; /* Чтобы обертка подстраивалась под размер картинки */
+}
+
+.section-1 img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Убираем нижний отступ у картинки */
+  border-radius: 15px; /* Слегка скругляем углы изображения */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Добавляем тень для объема */
+}
+
+/* Стили для баннера быстрой доставки */
+.quick-delivery-banner {
+  position: absolute;
+  bottom: -20px; /* Позиционируем чуть ниже изображения */
+  left: 50%; /* Центрируем по горизонтали */
+  transform: translateX(-50%); /* Корректируем центрирование */
+  background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+  color: #333; /* Темный текст */
+  padding: 10px 20px;
+  border-radius: 30px; /* Скругленные углы */
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+  white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+.quick-delivery-banner svg {
+  margin-right: 10px; /* Отступ иконки от текста */
+  fill: #007bff; /* Цвет иконки */
+}
+
+/* Адаптивность для заголовков и текстов */
+@media (max-width: 767.98px) { /* Для мобильных устройств (меньше md) */
+  .section-1 h1 {
+    font-size: 3em;
+  }
+  .section-1 .lead {
+    font-size: 1.2em;
+  }
+  .btn {
+    width: 100%; /* Кнопки на всю ширину на мобильных */
+    margin-bottom: 15px; /* Отступ между кнопками */
+  }
+  .btn-primary {
+    margin-bottom: 0; /* Убираем нижний отступ у первой кнопки, если она одна */
+  }
+  .quick-delivery-banner {
+    position: static; /* Убираем абсолютное позиционирование */
+    transform: none; /* Убираем трансформацию */
+    margin-top: 20px; /* Добавляем отступ сверху */
+    width: fit-content; /* Ширина по контенту */
+    margin-left: auto; /* Выравниваем по правому краю */
+    margin-right: auto; /* Центрируем */
+  }
+}
+
+/* Можно убрать стили для других секций, если они не нужны */
+.section-2, .section-3, .section-4, .section-5 {
+  height: auto; /* Теперь секции будут иметь высоту контента */
+  min-height: 100vh; /* Но при этом будут занимать минимум высоту экрана */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+
+
+/*Кнопки*\
+/* Стиль для "нежно белой" кнопки */
+.btn-gentle-white {
+  margin-left: 5%;
+  background-color: #ffffff; /* Нежно белый фон */
+  color: #007bff; /* Синий текст, чтобы был виден на белом */
+  border: 2px solid #ffffff; /* Белая рамка, чтобы при наведении не было скачка */
+  transition: all 0.4s ease-in-out; /* Плавный переход для всех свойств */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+  position: relative; /* Для псевдоэлемента */
+  overflow: hidden; /* Чтобы эффект не выходил за границы */
+}
+
+.btn-gentle-white:hover {
+  background-color: #007bff; /* Фон становится синим */
+  color: #ffffff; /* Текст становится белым */
+  border-color: #007bff; /* Цвет рамки меняется на синий */
+  transform: translateY(-3px); /* Легкий подъем кнопки вверх */
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+/* Эффект "вау" для нежно белой кнопки */
+.btn-gentle-white::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Начинаем слева за пределами кнопки */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3) 0%, /* Полупрозрачный белый */
+    rgba(255, 255, 255, 0.1) 50%, /* Еще более прозрачный */
+    rgba(255, 255, 255, 0) 100% /* Полностью прозрачный */
+  );
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-gentle-white:hover::before {
+  left: 100%; /* Сдвигаем полосу слева направо */
+}
+
+
+/* Стиль для "нежно теплой, нежно оранжевой" кнопки */
+.btn-gentle-warm-orange {
+  background: linear-gradient(45deg, #ffcc80, #ffab40); /* Нежно оранжевый градиент */
+  color: #ffffff; /* Белый текст */
+  border: 2px solid #ffab40; /* Теплая рамка */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Более "пружинистый" переход */
+  box-shadow: 0 4px 15px rgba(255, 171, 64, 0.3); /* Тень в тон кнопки */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gentle-warm-orange:hover {
+  background: linear-gradient(45deg, #ffab40, #ff8f00); /* Более насыщенный оранжевый при наведении */
+  color: #ffffff; /* Белый текст */
+  border-color: #ff8f00; /* Более темная рамка */
+  transform: translateY(-5px) scale(1.03); /* Поднимаем выше и немного увеличиваем */
+  box-shadow: 0 10px 25px rgba(255, 171, 64, 0.5); /* Более выраженная тень */
+}
+
+/* Эффект "вау" для теплой кнопки */
+.btn-gentle-warm-orange::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%, /* Белая полоса */
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%); /* Начинаем слева */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-gentle-warm-orange:hover::before {
+  transform: translateX(100%); /* Сдвигаем полосу вправо */
+}
+
+
+/* Дополнительные стили для секции с кнопками */
+/* Если вы хотите, чтобы кнопки были в первой секции */
+.section-1 .d-flex.flex-wrap {
+  margin-top: 30px; /* Небольшой отступ сверху для кнопок */
+  justify-content: center; /* Центрируем кнопки */
+}
+
+/* Убираем лишние отступы на больших экранах, если они есть */
+@media (min-width: 992px) {
+  .section-1 .d-flex.flex-wrap {
+    justify-content: flex-start; /* Выравнивание по левому краю, если нужно */
+  }
+}
+
+/* Уменьшаем кнопки на мобильных, чтобы эффекты были лучше видны */
+@media (max-width: 767.98px) {
+  .btn {
+    width: 80%; /* Кнопки чуть меньше на мобильных */
+    margin: 10px auto; /* Центрируем и добавляем отступ */
+    display: block; /* Делаем их блочными */
+  }
+}
+
